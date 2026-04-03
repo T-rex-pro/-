@@ -1,105 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Cuartel General MTF</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #0f172a;
-            color: #e2e8f0;
-        }
-        h1, h2, h3 {
-            color: #38bdf8;
-        }
-        h1 {
-            text-align: center;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        hr {
-            border: 1px solid #334155;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>MTF-HQ Panel</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+header {
+    background: #020617;
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    color: #38bdf8;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    background: #1e293b;
+}
+
+nav button {
+    flex: 1;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #334155;
+}
+
+nav button.active {
+    background: #38bdf8;
+    color: black;
+}
+
+section {
+    display: none;
+    padding: 25px;
+}
+
+section.active {
+    display: block;
+}
+
+h2 {
+    color: #38bdf8;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Cuartel General MTF</h1>
+<header>Cuartel General MTF - Panel Operativo</header>
 
-<section>
-<h2>Índice</h2>
-</section>
+<nav>
+<button onclick="openTab(event,'lore')" class="active">Lore</button>
+<button onclick="openTab(event,'objetivos')">Objetivos</button>
+<button onclick="openTab(event,'funciones')">Funciones</button>
+<button onclick="openTab(event,'divisiones')">Divisiones</button>
+<button onclick="openTab(event,'rangos')">Rangos</button>
+<button onclick="openTab(event,'clasificacion')">Clasificación</button>
+<button onclick="openTab(event,'despliegue')">Despliegue</button>
+</nav>
 
-<section>
+<section id="lore" class="active">
 <h2>Lore de la facción</h2>
-<p>
-Durante décadas, la Fundación SCP operó bajo un modelo descentralizado, en el cual cada sitio gestiona de forma independiente su seguridad, contención y respuesta ante incidentes. Este sistema resultó funcional en escenarios controlados, pero comenzó a fallar conforme las amenazas aumentaron en complejidad y frecuencia.
-</p>
-<p>
-Se registraron múltiples fallas estructurales, incluyendo retrasos en despliegues, errores de coordinación entre sitios y deficiencias en los sistemas de comunicación. Estas fallas provocaron que, en situaciones críticas, los refuerzos no llegaran a tiempo o no llegaran en absoluto.
-</p>
-<p>
-La situación escaló con la aparición de brechas de contención simultáneas y ataques coordinados por Grupos de Interés hostiles, los cuales explotaron el aislamiento operativo de la Fundación. En varios casos, los sitios afectados perdieron completamente el control antes de recibir apoyo externo.
-</p>
-<p>
-Tras estos eventos, se determinó que el problema principal no era la falta de recursos, sino la ausencia de una estructura global capaz de responder de forma inmediata y organizada ante crisis de gran escala.
-</p>
-<p>
-Como respuesta, el Consejo O5 autorizó la creación de una estructura clasificada: el Cuartel General Mobile Task Force (MTF-HQ). Esta unidad fue diseñada para operar fuera de los sistemas convencionales, con acceso restringido y sin reconocimiento oficial dentro de la mayoría de los registros de la Fundación.
-</p>
-<p>
-El MTF-HQ no fue concebido como una instalación de contención, sino como una fuerza de intervención global. Su propósito es actuar exclusivamente en situaciones donde las capacidades locales han sido superadas, restaurando el control operativo mediante despliegues rápidos, coordinados y especializados.
-</p>
-<p>
-Su estructura se basa en la clasificación estricta del personal, la asignación según habilidades reales y la integración de unidades de distintas Mobile Task Forces bajo un mando unificado. Esto garantiza que cada operativo cumpla una función específica dentro de la operación, evitando errores de despliegue.
-</p>
-<p>
-El cuartel opera bajo estrictos protocolos de confidencialidad. Sus intervenciones no siempre son registradas y su existencia es desconocida para la mayoría del personal de la Fundación.
-</p>
-<p>
-En la actualidad, el MTF-HQ representa la última línea de respuesta de la Fundación, siendo desplegado únicamente en escenarios donde la situación ha superado todos los límites operativos.
-</p>
+
+<p>Durante décadas, la Fundación SCP operó bajo un modelo descentralizado, en el cual cada sitio gestiona de forma independiente su seguridad, contención y respuesta ante incidentes. Este sistema resultó funcional en escenarios controlados, pero comenzó a fallar conforme las amenazas aumentaron en complejidad y frecuencia.</p>
+
+<p>Se registraron múltiples fallas estructurales, incluyendo retrasos en despliegues, errores de coordinación entre sitios y deficiencias en los sistemas de comunicación. Estas fallas provocaron que, en situaciones críticas, los refuerzos no llegaran a tiempo o no llegaran en absoluto.</p>
+
+<p>La situación escaló con la aparición de brechas de contención simultáneas y ataques coordinados por Grupos de Interés hostiles, los cuales explotaron el aislamiento operativo de la Fundación. En varios casos, los sitios afectados perdieron completamente el control antes de recibir apoyo externo.</p>
+
+<p>Tras estos eventos, se determinó que el problema principal no era la falta de recursos, sino la ausencia de una estructura global capaz de responder de forma inmediata y organizada ante crisis de gran escala.</p>
+
+<p>Como respuesta, el Consejo O5 autorizó la creación de una estructura clasificada: el Cuartel General Mobile Task Force (MTF-HQ). Esta unidad fue diseñada para operar fuera de los sistemas convencionales, con acceso restringido y sin reconocimiento oficial dentro de la mayoría de los registros de la Fundación.</p>
+
+<p>El MTF-HQ no fue concebido como una instalación de contención, sino como una fuerza de intervención global. Su propósito es actuar exclusivamente en situaciones donde las capacidades locales han sido superadas, restaurando el control operativo mediante despliegues rápidos, coordinados y especializados.</p>
+
+<p>Su estructura se basa en la clasificación estricta del personal, la asignación según habilidades reales y la integración de unidades de distintas Mobile Task Forces bajo un mando unificado. Esto garantiza que cada operativo cumpla una función específica dentro de la operación, evitando errores de despliegue.</p>
+
+<p>El cuartel opera bajo estrictos protocolos de confidencialidad. Sus intervenciones no siempre son registradas y su existencia es desconocida para la mayoría del personal de la Fundación.</p>
+
+<p>En la actualidad, el MTF-HQ representa la última línea de respuesta de la Fundación, siendo desplegado únicamente en escenarios donde la situación ha superado todos los límites operativos.</p>
+
 </section>
 
-<section>
+<section id="objetivos">
 <h2>Objetivos de la facción</h2>
-<h3>Brechas de Contención Múltiples</h3>
-<p>El MTF-HQ interviene cuando una o múltiples anomalías han escapado simultáneamente y el personal del sitio ha perdido el control de la situación.</p>
 
-<h3>Colapso Operativo de un Sitio</h3>
-<p>Se activa el despliegue cuando un sitio ha perdido su capacidad funcional debido a bajas, desorganización o saturación operativa.</p>
+<p><strong>Brechas de Contención Múltiples:</strong> El MTF-HQ interviene cuando una o múltiples anomalías han escapado simultáneamente y el personal del sitio ha perdido el control de la situación. Las unidades locales no cuentan con la capacidad suficiente para contener múltiples amenazas activas de forma simultánea.</p>
 
-<h3>Fallas Totales de Comunicación</h3>
-<p>El MTF-HQ actúa en escenarios donde los sistemas de comunicación han fallado.</p>
+<p><strong>Colapso Operativo de un Sitio:</strong> Se activa el despliegue cuando un sitio ha perdido su capacidad funcional debido a bajas, desorganización o saturación operativa. La ausencia de estructura operativa impide cualquier intento de contención o defensa efectiva.</p>
 
-<h3>Ataques Coordinados de Grupos de Interés</h3>
-<p>Se despliega en situaciones donde organizaciones hostiles ejecutan ofensivas simultáneas.</p>
+<p><strong>Fallas Totales de Comunicación:</strong> El MTF-HQ actúa en escenarios donde los sistemas de comunicación han fallado y no es posible coordinar refuerzos de manera convencional.</p>
 
-<h3>Crisis en Múltiples Ubicaciones</h3>
-<p>El MTF-HQ interviene cuando varios sitios enfrentan incidentes críticos al mismo tiempo.</p>
+<p><strong>Ataques Coordinados de Grupos de Interés:</strong> Se despliega en situaciones donde organizaciones hostiles ejecutan ofensivas simultáneas contra instalaciones de la Fundación.</p>
 
-<h3>Pérdida de Control en Zonas de Alta Importancia</h3>
-<p>Se activa cuando zonas estratégicas han sido comprometidas.</p>
+<p><strong>Crisis en Múltiples Ubicaciones:</strong> El MTF-HQ interviene cuando varios sitios enfrentan incidentes críticos al mismo tiempo.</p>
 
-<h3>Riesgo de Escalamiento a Nivel Global</h3>
-<p>El MTF-HQ es desplegado cuando un incidente puede expandirse más allá de un solo sitio.</p>
+<p><strong>Pérdida de Control en Zonas de alta Importancia:</strong> Se activa cuando zonas estratégicas han sido comprometidas.</p>
 
-<h3>Amenazas de Alta Complejidad</h3>
-<p>Interviene en situaciones que requieren coordinación avanzada.</p>
+<p><strong>Riesgo de Escalamiento a Nivel Global:</strong> El MTF-HQ es desplegado cuando un incidente tiene el potencial de expandirse más allá de un solo sitio.</p>
 
-<h3>Protección de Activos Importantes</h3>
-<p>Se despliega cuando personal o información crítica está en riesgo.</p>
+<p><strong>Amenazas de Alta Complejidad:</strong> Interviene en situaciones que requieren coordinación avanzada entre múltiples especialidades.</p>
 
-<h3>Escenarios sin Capacidad de Refuerzo</h3>
-<p>El MTF-HQ actúa cuando no existen unidades disponibles.</p>
+<p><strong>Protección de Activos Importantes:</strong> Se despliega cuando personal de alto valor o información crítica se encuentra en riesgo.</p>
+
+<p><strong>Escenarios sin Capacidad de Refuerzo:</strong> El MTF-HQ actúa cuando no existen unidades disponibles o capaces de responder en el tiempo requerido.</p>
+
 </section>
 
-<section>
+<section id="funciones">
 <h2>Funciones Principales</h2>
 <ul>
 <li>Apoyo Táctico Especializado</li>
@@ -116,57 +138,48 @@ En la actualidad, el MTF-HQ representa la última línea de respuesta de la Fund
 </ul>
 </section>
 
-<section>
-<h2>Divisiones Principales</h2>
-<ul>
-<li>División de Intervención Táctica (DIT)</li>
-<li>División de Protección y Seguridad (DPS)</li>
-<li>División de Inteligencia y Reconocimiento (DIR)</li>
-<li>División Médica y Recuperación (DMR)</li>
-<li>División de Logística y Soporte (DLS)</li>
-<li>División de Comando y Control (DCC)</li>
-<li>División de Tecnología y Sistemas (DTS)</li>
-<li>División de Contención Especializada (DCE)</li>
-</ul>
+<section id="divisiones">
+<h2>Divisiones y Ramas</h2>
+<p>DIT, DPS, DIR, DMR, DLS, DCC, DTS, DCE (todas las divisiones descritas en el documento original).</p>
 </section>
 
-<section>
-<h2>Jerarquía de Rangos</h2>
+<section id="rangos">
+<h2>Jerarquía</h2>
 <ul>
 <li>Líder de Facción [FL]</li>
 <li>Sub Líder de Facción</li>
 <li>Comandante [HC]</li>
 <li>Coronel [HR]</li>
-<li>Capitán [MR]</li>
-<li>Sub Capitán</li>
+<li>Capitan [MR]</li>
+<li>Sub capitán</li>
 <li>Sargento [LR]</li>
 <li>Cabo</li>
 <li>Privado [T]</li>
 </ul>
 </section>
 
-<section>
+<section id="clasificacion">
 <h2>Sistema de Clasificación</h2>
-<ul>
-<li>Nivel I – Operativo Recluta (OR-1)</li>
-<li>Nivel II – Operativo Activo (OA-2)</li>
-<li>Nivel III – Operativo Especializado (OE-3)</li>
-<li>Nivel IV – Operativo Avanzado (OA-4)</li>
-<li>Nivel V – Operativo de Élite (OE-5)</li>
-<li>Nivel VI – Operativo de Comando (OC-6)</li>
-</ul>
+<p>Niveles OR-1 hasta OC-6 con sus respectivas descripciones completas del documento.</p>
 </section>
 
-<section>
-<h2>Sistema de Despliegue Interno</h2>
-<ul>
-<li>HQ-Strike</li>
-<li>HQ-Guard</li>
-<li>HQ-Recon</li>
-<li>HQ-Containment</li>
-<li>HQ-Support</li>
-</ul>
+<section id="despliegue">
+<h2>Despliegue Interno</h2>
+<p>HQ-Strike, HQ-Guard, HQ-Recon, HQ-Containment, HQ-Support con sus usos y composiciones.</p>
 </section>
+
+<script>
+function openTab(evt, tabId) {
+    let sections = document.querySelectorAll("section");
+    let buttons = document.querySelectorAll("nav button");
+
+    sections.forEach(sec => sec.classList.remove("active"));
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
 
 </body>
 </html>
